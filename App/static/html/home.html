@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/swiper.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/app/home/home.css">
+    <title>首页</title>
+</head>
+
+<body>
+
+<header></header>
+
+<div id="home">
+
+     {#   顶部轮播       #}
+        <div class="swiper-container" id="topSwiper">
+            <div class="swiper-wrapper">
+                {% for wheel in wheels %}
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="{{ wheel.img }}" alt="{{ wheel.name }}">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+</div>
+
+    <footer>
+
+            <a href="/static/html/home.html" class="home">
+
+                <dl>
+
+                    <dt>
+                        <span></span>
+                    </dt>
+                    <dd>首页</dd>
+
+                </dl>
+
+            </a>
+            <a href="/static/html/market.html" class="market">
+
+                <dl>
+
+                    <dt>
+                        <span></span>
+                    </dt>
+                    <dd>闪购</dd>
+
+                </dl>
+
+            </a>
+            <a href="/static/html/cart.html" class="cart">
+
+                <dl>
+
+                    <dt>
+                        <span></span>
+                    </dt>
+                    <dd>购物车</dd>
+
+                </dl>
+
+            </a>
+            <a href="/static/html/mine.html" class="mine">
+
+                <dl>
+
+                    <dt>
+                        <span></span>
+                    </dt>
+                    <dd>我的</dd>
+
+                </dl>
+
+            </a>
+
+        </footer>
+
+
+
+
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.js"></script>
+<script type="text/javascript" src="/static/js/swiper.jquery.js"></script>
+<script type="text/javascript" src="/static/js/base.js"></script>
+<script type="text/javascript" src="/static/app/home/js/home.js"></script>
+</body>
+</html>
